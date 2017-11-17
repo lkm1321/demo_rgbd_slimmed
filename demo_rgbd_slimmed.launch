@@ -1,7 +1,9 @@
 <launch>
 
+<group ns="demo_rgbd_slimmed">
   <node pkg="demo_rgbd_slimmed" type="featureTracking" name="featureTracking" output="screen"/>
   <node pkg="demo_rgbd_slimmed" type="visualOdometry" name="visualOdometry" output="screen"/>
   <node pkg="demo_rgbd_slimmed" type="processDepthmap" name="processDepthmap" output="screen"/>
+</group> 
 
 </launch>
