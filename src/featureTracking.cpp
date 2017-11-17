@@ -26,7 +26,7 @@ CvSize showSize = cvSize(imageWidth / showDSRate, imageHeight / showDSRate);
 IplImage *imageShow = cvCreateImage(showSize, IPL_DEPTH_8U, 1);
 IplImage *harrisLast = cvCreateImage(showSize, IPL_DEPTH_32F, 1);
 
-CvMat kMat = cvMat(3, 3, CV_64FC1, kImage);
+Mat kMat = cv::Mat(3, 3, CV_64FC1, &kImage);
 
 const int maxFeatureNumPerSubregion = 2;
 const int xSubregionNum = 12;
