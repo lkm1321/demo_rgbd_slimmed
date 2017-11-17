@@ -197,8 +197,8 @@ void imageDataHandler(const sensor_msgs::Image::ConstPtr& imageData)
 
   showCount = (showCount + 1) % (showSkipNum + 1);
   if (showCount == showSkipNum) {
-    Mat imageShowMat(imageShow);
-    bridge.image = imageShowMat;
+    // Mat imageShowMat(imageShow);
+    bridge.image = imageShow;
     bridge.encoding = "mono8";
     sensor_msgs::Image::Ptr imageShowPointer = bridge.toImageMsg();
     imageShowPubPointer->publish(imageShowPointer);
